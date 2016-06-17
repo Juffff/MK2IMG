@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collage</title>
+<body>
+
+<div class="container">
+
+    <div class="description">
+
+        <div class="logo">
+            <span class="brands">BRANDS</span><span class="outlet">OUTLET</span>
+        </div>
+
+        <div class="priceblock">
+            <span class="parameter lineName listPrice" id="list">$listprice</span> <!--Old price-->
+            <span class="parameter lineName netPrice" id="net">$price</span><br> <!--New price-->
+            <div class="strike"></div>
+
+        </div>
+
+        <div class="text">
+            <span class="lineName">Бренд:&#9</span><span class="parameter lineName">$brand</span><br> <!--Brand name-->
+            <span class="lineName">Цвет:&#9</span><span class="parameter lineName">$colour</span><br> <!--Color-->
+            <span class="lineName">Доступные размеры:&#9</span><br><span class="parameter lineName">$sizes</span><br><!--Sizes-->
+
+        </div>
+
+    </div>
+
+    <div class="item" id="img1"></div>
+    <div class="item" id="img2"></div>
+    <div class="item" id="img3"></div>
+    <div class="item" id="img4"></div>
+
+</div>
+
+<style>
+
+
+    .container {
+        width: 800px;
+        height: 968px;
+        border-radius: 10px;
+        border: 3px solid black;
+        background: #0e0e0e; /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #0e0e0e 0%, #a5a5a5 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #0e0e0e 0%, #a5a5a5 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #0e0e0e 0%, #a5a5a5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0e0e0e', endColorstr='#a5a5a5', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+    }
+
+    .description {
+        width: 796px;
+        height: 160px;
+        border: 2px solid white;
+        border-radius: 10px;
+        float: left;
+
+    }
+
+    .logo {
+        float: right;
+        color: white;
+        font-family: Impact, sans-serif;
+        font-size: 3em;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .brands {
+        color: red;
+    }
+
+    .outlet {
+        color: white;
+    }
+
+    .priceblock {
+        position: absolute;
+        left: 590px;
+        top: 78px;
+    }
+
+    .item {
+        width: 396px;
+        height: 400px;
+        border: 2px solid black;
+        border-radius: 10px;
+        float: left;
+    }
+
+    .lineName {
+        color: white;
+        font-family: Impact, sans-serif;
+        font-size: 2em;
+        margin-left: 15px;
+    }
+
+
+    #list {
+        position: relative;
+        left: -98px;
+        top: -11px;
+        font-size: 4em;
+        color: white;
+    }
+
+    #net {
+        font-size: 48px;
+        position: absolute;
+        left: 76px;
+        color: lightskyblue;
+        text-shadow: #000000 1px 0px, #020000 1px 1px, #000000 0px 1px, #000000 -1px 1px, #000000 -1px 0px, black -1px -1px, black 0px -1px, black 1px -1px, black 0 0 3px, red 0 0 3px, black 0 0 3px, black 0 0 3px, black 0 0 3px, black 0 0 3px, black 0 0 3px, black 0 0 3px;
+    }
+
+    .strike {
+        background: url("../htmlcollagetemplate/img/strike.png") 100% 100% no-repeat;
+        background-size: cover;
+        width: 156px;
+        height: 55px;
+        position: absolute;
+        left: -91px;
+        top: -1px;
+    }
+
+
+    #img1 {
+        background: url("../images/$url1") 100% 100% no-repeat;
+    background-size: cover;
+    }
+
+    #img2 {
+        background: url("../images/$url2") 100% 100% no-repeat;
+    background-size: cover;
+    }
+
+    #img3 {
+        background: url("../images/$url3") 100% 100% no-repeat;
+    background-size: cover;
+    }
+
+    #img4 {
+        background: url("../images/$url4") 100% 100% no-repeat;
+    background-size: cover;
+    }
+</style>
+</body>
+</html>
