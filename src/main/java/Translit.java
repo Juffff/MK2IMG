@@ -73,7 +73,7 @@ public class Translit {
         letters.put("ю", "u");
         letters.put("я", "ya");
         letters.put("ь", "");
-        letters.put("'", "`");
+        letters.put("'", "");
     }
 
 

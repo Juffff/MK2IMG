@@ -10,11 +10,12 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         cleanDir();
-
+        System.out.println("Press Enter");
 
         //reading images directory and creating itemList
         File directory = new File("images");
         System.out.println(directory.getAbsolutePath());
+        new BufferedReader(new InputStreamReader(System.in)).readLine();
         File[] files = directory.listFiles();
 
         for (int i = 0; i < files.length; i++) {
@@ -34,6 +35,8 @@ public class Main {
             System.out.println(i.toString());
         }
 
+        System.out.println(itemList);
+        new BufferedReader(new InputStreamReader(System.in)).readLine();
 
         for (int i = 0; i < itemList.size(); i++) {
             try {
@@ -64,6 +67,8 @@ public class Main {
         Item item = itemList.get(i);
         File f = new File("outHtml/"+new Translit().toTranslit(item.getName())+".html");
         if (!f.exists()){
+            System.out.println(f.getName());
+            System.out.println(f.getPath());
             f.createNewFile();
         }
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
@@ -146,6 +151,7 @@ public class Main {
             fileName =fileName.replace("outHTML","outJS");
 
 
+
             File jsFile = new File(fileName);
             if (!jsFile.exists()){
                 jsFile.createNewFile();
@@ -180,6 +186,12 @@ public class Main {
         File outHtmlFile = new File("outHTML");
         File[] outHtmlFiles = outHtmlFile.listFiles();
         for(File f:outHtmlFiles){
+            if(f.isFile()) f.delete();
+        }
+
+        File images = new File("images");
+        File[] imagesFiles = images.listFiles();
+        for(File f:imagesFiles){
             if(f.isFile()) f.delete();
         }
 
